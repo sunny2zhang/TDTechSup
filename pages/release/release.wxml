@@ -7,7 +7,7 @@
         <view class="addpic">
             <view bindtap="addpic" class="atts">+ 添加图片</view>
         </view>
-        <view><image src="{{testpic}}"></image></view>
+        <!-- <view><image src="{{testpic}}"></image></view> -->
         <image bindtap="delpic" wx:if="{{pic!=''}}" src="{{pic}}" class="viewpic"></image>
         <view class="tools">
             <button form-type="submit" type="primary" style="margin-top:20px">提交</button>

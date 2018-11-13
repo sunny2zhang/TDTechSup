@@ -13,13 +13,13 @@ Page({
             let listurl = '';
             for (let i in app.path.authority) {
                 if (app.path.authority[i] == loginInfo.openid) {
-                    listurl = app.path.api + 'faqlist?_sort=id&_order=DESC';
+                    listurl = app.path.api + 'faqlists?_sort=id&_order=DESC';
                     this.setData({
                         faqbutton: true
                     });
                     break;
                 } else {
-                    listurl = app.path.api + 'faqlist?_sort=id&_order=DESC&wxid=' + loginInfo.openid;
+                    listurl = app.path.api + 'faqlists?_sort=id&_order=DESC&wxid=' + loginInfo.openid;
                 }
             }
             //加载列表

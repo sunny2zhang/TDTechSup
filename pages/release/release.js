@@ -10,15 +10,15 @@ Page({
         testpic:''
     },
     onLoad: function () {
-        app.wxGet(app.path.api + 'images/9', (res) => {
-            this.setData({
-                testpic: 'data:image/jpeg;base64,' +res.data.wxfile
-            });
-        });
+        // app.wxGet(app.path.api + 'images/9', (res) => {
+        //     this.setData({
+        //         testpic: 'data:image/jpeg;base64,' +res.data.wxfile
+        //     });
+        // });
        
     },
     faqpost: function (e) {
-        app.wxGet(app.path.api + 'faqlist?title=' + e.detail.value.title, (msg) => {
+        app.wxGet(app.path.api + 'faqlists?title=' + e.detail.value.title, (msg) => {
             if (msg.data.length != 0){
                 wx.showToast({
                     title: '标题重复请修改',
@@ -35,9 +35,9 @@ Page({
                 });
             } else {
                 app.wxSetting((userInfo) => {
-                    app.wxGet(app.path.api + 'faqlist', (res) => {
+                    app.wxGet(app.path.api + 'faqlists', (res) => {
                         app.wxLogin((loginInfo) => {
-                            app.wxPost(app.path.api + 'faqlist', {
+                            app.wxPost(app.path.api + 'faqlists', {
                                 'id': parseInt(res.data[res.data.length - 1].id) + 1,
                                 "wxid": loginInfo.openid,
                                 "name": userInfo.nickName,
@@ -69,35 +69,29 @@ Page({
         });        
     },
     addpic: function () {
-        app.addpic('1', (res) => {
+        app.addpic('9', (res) => {
             this.setData({
                 pic: res.tempFilePaths
             });
             wx.getStorage({
                 key: 'authorization',
                 success(token) {
-                    // wx.uploadFile({
-                    //     url: app.path.api + 'images/9', //仅为示例，非真实的接口地址
-                    //     filePath: res.tempFilePaths[0],
-                    //     name: 'file',
-                    //     header: {
-                    //         'content-type': 'application/json',
-                    //         'authorization': token.data
-                    //     },
-                    //     formData: {
-                    //         'user': 'test',
-                    //         "file": "",
-                    //         "faqlistId": "2"
-                    //     },
-                    //     success: (res) => {
-                    //         console.log(JSON.parse(res.data).wxfile);
-                    //         // this.testpic = 'data:image/jpeg;base64,' + res.wxfile;
-
-                    //     },
-                    //     fail: (err) => {
-                    //         console.log(err);
-                    //     }
-                    // })
+                    wx.uploadFile({
+                        url: app.path.api + 'images', //仅为示例，非真实的接口地址
+                        filePath: res.tempFilePaths[0],
+                        name: 'file',
+                        header: {
+                            'content-type': 'application/json',
+                            'authorization': token.data
+                        },
+                        success: (res) => {
+                            console.log(JSON.parse(res.data).wxfile);
+                            // this.testpic = 'data:image/jpeg;base64,' + res.wxfile;
+                        },
+                        fail: (err) => {
+                            console.log(err);
+                        }
+                    })
                 }
             });
         });
