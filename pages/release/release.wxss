@@ -1,0 +1,50 @@
+.res-wrap {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.title {
+    margin-top: 10px;
+    width: calc(100% - 12px);
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.addpic {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.viewpic {
+    margin-top: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.tools {
+    width: calc(100% - 20px);
+    position: fixed;
+    bottom: 10px;
+    line-height: 30px;
+}
+
+.cont {
+    margin-top: 10px;
+    width: calc(100% - 12px);
+    padding: 5px;
+    height: 160px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.atts {
+    display: inline-block;
+    padding: 0 20px;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}

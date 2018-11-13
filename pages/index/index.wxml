@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+    <view style="text-align:center;" wx:if="{{authority}}">
+        <image style="width:150px;height:145px" src="{{picsrc}}"></image>
+        <view style="padding:0 0 30px 0;">{{title}}</view>
+        <button type="primary" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            {{buttontext}}
+        </button>        
+    </view>
+    <view style="text-align:center;font-size:14px;color:#ccc;position:fixed;bottom:20px">{{copyright}}</view>
+</view>

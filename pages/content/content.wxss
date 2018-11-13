@@ -1,0 +1,117 @@
+.title {
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.edittitle {
+    margin: 10px;
+    width: calc(100% - 32px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.wrap {
+    padding: 10px;
+    color: #666;
+    background: #eee;
+    border-bottom: 1px solid #1aad19;
+    height: 20px;
+    line-height: 20px;
+}
+
+.recom {
+    border-bottom: 1px solid #ccc;
+}
+
+.text {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.tools {
+    width: calc(100% - 20px);
+    position: fixed;
+    margin:0 10px;
+    bottom: 10px;
+    line-height: 30px;
+}
+
+.operation {
+    margin: 10px 0 0 10px;
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+}
+
+.avatar {
+    float:left;
+    border-radius: 3px;
+    margin: 2px 3px 0 0;
+    width: 16px;
+    height: 16px;
+}
+
+.blank {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+
+.reply {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid #1aad19;
+    background: #fff;
+    padding-top: 10px;
+}
+
+.reply button {
+    margin: 10px 10px 0 10px;
+}
+
+.replywrap {
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.replytext {
+    width: calc(100% - 32px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 10px;
+}
+
+.replycontent {
+    width: calc(100% - 20px);
+    display: block;
+    padding: 10px;
+}
+.addpic {
+    margin: 10px 0 0 10px;
+    text-align: left;
+}
+.viewpic {
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+}
+.atts {
+    display: inline-block;
+    padding: 0 20px;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
